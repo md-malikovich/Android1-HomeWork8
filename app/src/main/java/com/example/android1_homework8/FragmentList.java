@@ -15,16 +15,16 @@ import java.util.List;
 
 public class FragmentList extends Fragment {
 
-    List<Element> elements;
+    //List<Element> elements;
 
     public FragmentList() {
-        elements = new ArrayList<>();
+        //elements = new ArrayList<>();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_list, container, false);
-        Button add = v.findViewById(R.id.add);
+        /*Button add = v.findViewById(R.id.add);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,12 +43,12 @@ public class FragmentList extends Fragment {
                 }
                 Log.d("ololo", "showElement(elements.get(0))");
             }
-        });
+        });*/
 
         return v;
     }
 
-    public void add() { // TODO: открывает FragmentAdd
+    /*public void add() { // TODO: открывает FragmentAdd
         MainActivity activity = (MainActivity) getActivity();
         activity.showAddFragment();
     }
@@ -62,5 +62,5 @@ public class FragmentList extends Fragment {
     public void showElement(Element element) {
         MainActivity activity = (MainActivity) getActivity();
         activity.showShowFragment(element);
-    }
+    }*/
 }
