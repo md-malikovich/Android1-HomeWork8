@@ -18,11 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        showListFragment(); // Фрагмент открывается сразу при запуске
+        //showListFragment(); // Фрагмент открывается сразу при запуске
+        showRecyclerFragment();
     }
 
     public void showListFragment() { // показывает ListFragment через метод showFragment()
-        if (fragmentList == null) { //  Tпроверка на наличие fragmentList
+        if (fragmentList == null) { //  проверка на наличие fragmentList
             fragmentList = new FragmentList();
         }
         showFragment(fragmentList, tempFragment); // показывает Ф и скрывает текущий Фрагмент (Add / Show)
@@ -64,5 +65,11 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    public void showRecyclerFragment() {
+        FragmentRecycler fragmentRecycler = new FragmentRecycler();
+        showFragment(fragmentRecycler, null); // показывает Ф и скрывает текущий Фрагмент (Add / Show)
+        //tempFragment = null; // обнуляем после скрытия
     }
 }
